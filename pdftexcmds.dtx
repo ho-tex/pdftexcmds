@@ -22,7 +22,7 @@
 %
 % The Current Maintainers of this work are
 % Heiko Oberdiek and the Oberdiek Package Support Group
-% https://github.com/ho-tex/oberdiek/issues
+% https://github.com/ho-tex/pdftexcmds/issues
 %
 % The Base Interpreter refers to any `TeX-Format',
 % because some files are installed in TDS:tex/generic//.
@@ -32,11 +32,11 @@
 %    pdftexcmds.sty, pdftexcmds.pdf, pdftexcmds.ins, pdftexcmds.drv,
 %    pdftexcmds.bib, pdftexcmds-test1.tex, pdftexcmds-test2.tex,
 %    pdftexcmds-test-shell.tex, pdftexcmds-test-escape.tex,
-%    oberdiek.pdftexcmds.lua, pdftexcmds.lua.
+%    pdftexcmds.lua.
 %
 % Distribution:
-%    CTAN:macros/latex/contrib/oberdiek/pdftexcmds.dtx
-%    CTAN:macros/latex/contrib/oberdiek/pdftexcmds.pdf
+%    CTAN:macros/latex/contrib/pdftexcmds/pdftexcmds.dtx
+%    CTAN:macros/latex/contrib/pdftexcmds/pdftexcmds.pdf
 %
 % Unpacking:
 %    (a) If pdftexcmds.ins is present:
@@ -66,15 +66,10 @@
 %       pdflatex pdftexcmds.dtx
 %
 % Installation:
-%    TDS:tex/generic/oberdiek/pdftexcmds.sty
-%    TDS:scripts/oberdiek/oberdiek.pdftexcmds.lua
-%    TDS:scripts/oberdiek/pdftexcmds.lua
-%    TDS:doc/latex/oberdiek/pdftexcmds.pdf
-%    TDS:doc/latex/oberdiek/test/pdftexcmds-test1.tex
-%    TDS:doc/latex/oberdiek/test/pdftexcmds-test2.tex
-%    TDS:doc/latex/oberdiek/test/pdftexcmds-test-shell.tex
-%    TDS:doc/latex/oberdiek/test/pdftexcmds-test-escape.tex
-%    TDS:source/latex/oberdiek/pdftexcmds.dtx
+%    TDS:tex/generic/pdftexcmds/pdftexcmds.sty
+%    TDS:scripts/pdftexcmds/pdftexcmds.lua
+%    TDS:doc/latex/pdftexcmds/pdftexcmds.pdf
+%    TDS:source/latex/pdftexcmds/pdftexcmds.dtx
 %
 %<*ignore>
 \begingroup
@@ -123,7 +118,7 @@ This work has the LPPL maintenance status "maintained".
 
 The Current Maintainers of this work are
 Heiko Oberdiek and the Oberdiek Package Support Group
-https://github.com/ho-tex/oberdiek/issues
+https://github.com/ho-tex/pdftexcmds/issues
 
 
 The Base Interpreter refers to any `TeX-Format',
@@ -132,9 +127,7 @@ because some files are installed in TDS:tex/generic//.
 This work consists of the main source file pdftexcmds.dtx
 and the derived files
    pdftexcmds.sty, pdftexcmds.pdf, pdftexcmds.ins, pdftexcmds.drv,
-   pdftexcmds.bib, pdftexcmds-test1.tex, pdftexcmds-test2.tex,
-   pdftexcmds-test-shell.tex, pdftexcmds-test-escape.tex,
-   oberdiek.pdftexcmds.lua, pdftexcmds.lua.
+   pdftexcmds.lua.
 
 \endpreamble
 \let\MetaPrefix\DoubleperCent
@@ -147,16 +140,16 @@ and the derived files
   \file{pdftexcmds.bib}{\from{pdftexcmds.dtx}{bib}}%
   \usepreamble\defaultpreamble
   \usepostamble\defaultpostamble
-  \usedir{tex/generic/oberdiek}%
+  \usedir{tex/generic/pdftexcmds}%
   \file{pdftexcmds.sty}{\from{pdftexcmds.dtx}{package}}%
-%  \usedir{doc/latex/oberdiek/test}%
+%  \usedir{doc/latex/pdftexcmds/test}%
 %  \file{pdftexcmds-test1.tex}{\from{pdftexcmds.dtx}{test1}}%
 %  \file{pdftexcmds-test2.tex}{\from{pdftexcmds.dtx}{test2}}%
 %  \file{pdftexcmds-test-shell.tex}{\from{pdftexcmds.dtx}{test-shell}}%
 %  \file{pdftexcmds-test-escape.tex}{\from{pdftexcmds.dtx}{test-escape}}%
   \nopreamble
   \nopostamble
-%  \usedir{source/latex/oberdiek/catalogue}%
+%  \usedir{source/latex/pdftexcmds/catalogue}%
 %  \file{pdftexcmds.xml}{\from{pdftexcmds.dtx}{catalogue}}%
 }
 \def\MetaPrefix{-- }
@@ -166,8 +159,7 @@ and the derived files
 }
 \def\currentpostamble{\defaultpostamble}%
 \generate{%
-  \usedir{scripts/oberdiek}%
-  \file{oberdiek.pdftexcmds.lua}{\from{pdftexcmds.dtx}{lua}}%
+  \usedir{scripts/pdftexcmds}%
   \file{pdftexcmds.lua}{\from{pdftexcmds.dtx}{lua}}%
 }
 
@@ -182,7 +174,7 @@ and the derived files
 \Msg{*}
 \Msg{* And install the following script files:}
 \Msg{*}
-\Msg{*     oberdiek.pdftexcmds.lua, pdftexcmds.lua}
+\Msg{*     pdftexcmds.lua}
 \Msg{*}
 \Msg{* To produce the documentation run the file `pdftexcmds.drv'}
 \Msg{* through LaTeX.}
@@ -248,7 +240,7 @@ and the derived files
 % \title{The \xpackage{pdftexcmds} package}
 % \date{2019/11/24 v0.31}
 % \author{Heiko Oberdiek\thanks
-% {Please report any issues at \url{https://github.com/ho-tex/oberdiek/issues}}}
+% {Please report any issues at \url{https://github.com/ho-tex/pdftexcmds/issues}}}
 %
 % \maketitle
 %
