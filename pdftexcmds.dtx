@@ -787,11 +787,12 @@ and the derived files
   }%
   \def\pdftexcmds@temp#1{%
     \begingroup\expandafter\expandafter\expandafter\endgroup
-    \expandafter\ifx\csname pdf#1\endcsname\relax
+    \expandafter\ifx\csname
+         \expandafter\ifx\csname pdf#1\endcsname\relax\else pdf\fi#1\endcsname\relax
       \pdftexcmds@nopdftex
     \else
       \expandafter\let\csname pdf@#1\expandafter\endcsname
-      \csname pdf#1\endcsname
+      \csname\expandafter\ifx\csname pdf#1\endcsname\relax\else pdf\fi#1\endcsname
     \fi
   }%
   \pdftexcmds@temp{resettimer}%
