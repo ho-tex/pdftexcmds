@@ -1319,7 +1319,7 @@ and the derived files
 %    \begin{macrocode}
 \long\def\pdf@escapestring#1{%
   \directlua0{%
-    oberdiek.pdftexcmds.escapestring("\luaescapestring{#1}", "byte")%
+    oberdiek.pdftexcmds.escapestring("\luaescapestring{#1}")%
   }%
 }
 %    \end{macrocode}
