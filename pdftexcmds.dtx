@@ -713,19 +713,18 @@ and the derived files
 %    \begin{macrocode}
 \ifluatex
 \else
-  \@PackageInfoNoLine{pdftexcmds}{LuaTeX not detected}%
   \def\pdftexcmds@nopdftex{%
-    \@PackageInfoNoLine{pdftexcmds}{pdfTeX >= 1.30 not detected}%
     \let\pdftexcmds@nopdftex\relax
   }%
   \def\pdftexcmds@temp#1{%
     \begingroup\expandafter\expandafter\expandafter\endgroup
-    \expandafter\ifx\csname pdf#1\endcsname\relax
+    \expandafter\ifx\csname
+         \expandafter\ifx\csname pdf#1\endcsname\relax\else pdf\fi#1\endcsname\relax
       \pdftexcmds@nopdftex
     \else
       \expandafter\def\csname pdf@#1\expandafter\endcsname
       \expandafter##\expandafter{%
-        \csname pdf#1\endcsname
+        \csname\expandafter\ifx\csname pdf#1\endcsname\relax\else pdf\fi#1\endcsname
       }%
     \fi
   }%
