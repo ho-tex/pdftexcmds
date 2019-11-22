@@ -6,6 +6,7 @@ module = "pdftexcmds"
 textfiles = {"README.md"}
 unpackfiles = {'pdftexcmds.dtx'}
 sourcefiles={"*.dtx"}
+installfiles={"*.sty","*.lua"}
 
 maxprintline=10000
 checkruns = 2
