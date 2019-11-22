@@ -7,6 +7,7 @@ textfiles = {"README.md"}
 unpackfiles = {'pdftexcmds.dtx'}
 sourcefiles={"*.dtx"}
 installfiles={"*.sty","*.lua"}
+scriptfiles={"*.lua"}
 
 packtdszip  = true
 
