@@ -9,6 +9,10 @@ sourcefiles={"*.dtx"}
 installfiles={"*.sty","*.lua"}
 scriptfiles={"*.lua"}
 
+function docinit_hook ()
+ return  cp("pdftexcmds.bib", "build/unpacked" ,"build/doc")
+end
+ 
 packtdszip  = true
 
 maxprintline=10000
