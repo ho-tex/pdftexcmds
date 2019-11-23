@@ -2649,6 +2649,10 @@ end
 %   \begin{Version}{2019/11/24 v0.31}
 %   \item
 %     Use \xpackage{iftex} directly rather than \xpackage{ifluatex} and \xpackage{ifpdf} wrappers.
+%   \item detect \verb|\filmoddate| and other \hologo{XeTeX} commands.
+%   \item Adjust \cs{pdf@escapestring} in \hologo{LuaTeX} to produce
+%     the same as in \hologo{pdfTeX} in the 8bit
+%     range and not drop all non ascii characters.
 %   \end{Version}
 % \end{History}
 %
