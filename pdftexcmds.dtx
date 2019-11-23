@@ -2341,17 +2341,17 @@ end
 % \paragraph{Package.} This package is available on
 % CTAN\footnote{\CTANpkg{pdftexcmds}}:
 % \begin{description}
-% \item[\CTAN{macros/latex/contrib/oberdiek/pdftexcmds.dtx}] The source file.
-% \item[\CTAN{macros/latex/contrib/oberdiek/pdftexcmds.pdf}] Documentation.
+% \item[\CTAN{macros/latex/contrib/pdftexcmds/pdftexcmds.dtx}] The source file.
+% \item[\CTAN{macros/latex/contrib/pdftexcmds/pdftexcmds.pdf}] Documentation.
 % \end{description}
 %
 %
-% \paragraph{Bundle.} All the packages of the bundle `oberdiek'
+% \paragraph{Bundle.} All the packages of the bundle `pdftexcmds'
 % are also available in a TDS compliant ZIP archive. There
 % the packages are already unpacked and the documentation files
 % are generated. The files and directories obey the TDS standard.
 % \begin{description}
-% \item[\CTANinstall{install/macros/latex/contrib/oberdiek.tds.zip}]
+% \item[\CTANinstall{install/macros/latex/contrib/pdftexcmds.tds.zip}]
 % \end{description}
 % \emph{TDS} refers to the standard ``A Directory Structure
 % for \TeX\ Files'' (\CTAN{tds/tds.pdf}). Directories
@@ -2359,24 +2359,16 @@ end
 %
 % \subsection{Bundle installation}
 %
-% \paragraph{Unpacking.} Unpack the \xfile{oberdiek.tds.zip} in the
+% \paragraph{Unpacking.} Unpack the \xfile{pdftexcmds.tds.zip} in the
 % TDS tree (also known as \xfile{texmf} tree) of your choice.
 % Example (linux):
 % \begin{quote}
-%   |unzip oberdiek.tds.zip -d ~/texmf|
+%   |unzip pdftexcmds.tds.zip -d ~/texmf|
 % \end{quote}
 %
 % \paragraph{Script installation.}
-% Check the directory \xfile{TDS:scripts/oberdiek/} for
+% Check the directory \xfile{TDS:scripts/pdftexcmds/} for
 % scripts that need further installation steps.
-% Package \xpackage{attachfile2} comes with the Perl script
-% \xfile{pdfatfi.pl} that should be installed in such a way
-% that it can be called as \texttt{pdfatfi}.
-% Example (linux):
-% \begin{quote}
-%   |chmod +x scripts/oberdiek/pdfatfi.pl|\\
-%   |cp scripts/oberdiek/pdfatfi.pl /usr/local/bin/|
-% \end{quote}
 %
 % \subsection{Package installation}
 %
@@ -2393,15 +2385,10 @@ end
 % \begin{quote}
 % \def\t{^^A
 % \begin{tabular}{@{}>{\ttfamily}l@{ $\rightarrow$ }>{\ttfamily}l@{}}
-%   pdftexcmds.sty & tex/generic/oberdiek/pdftexcmds.sty\\
-%   oberdiek.pdftexcmds.lua & scripts/oberdiek/oberdiek.pdftexcmds.lua\\
-%   pdftexcmds.lua & scripts/oberdiek/pdftexcmds.lua\\
-%   pdftexcmds.pdf & doc/latex/oberdiek/pdftexcmds.pdf\\
-%   test/pdftexcmds-test1.tex & doc/latex/oberdiek/test/pdftexcmds-test1.tex\\
-%   test/pdftexcmds-test2.tex & doc/latex/oberdiek/test/pdftexcmds-test2.tex\\
-%   test/pdftexcmds-test-shell.tex & doc/latex/oberdiek/test/pdftexcmds-test-shell.tex\\
-%   test/pdftexcmds-test-escape.tex & doc/latex/oberdiek/test/pdftexcmds-test-escape.tex\\
-%   pdftexcmds.dtx & source/latex/oberdiek/pdftexcmds.dtx\\
+%   pdftexcmds.sty & tex/generic/pdftexcmds/pdftexcmds.sty\\
+%   pdftexcmds.lua & scripts/pdftexcmds/pdftexcmds.lua\\
+%   pdftexcmds.pdf & doc/latex/pdftexcmds/pdftexcmds.pdf\\
+%   pdftexcmds.dtx & source/latex/pdftexcmds/pdftexcmds.dtx\\
 % \end{tabular}^^A
 % }^^A
 % \sbox0{\t}^^A
