@@ -24,7 +24,7 @@ function update_tag(file,content,tagname,tagdate)
 
 local tagpattern="(%d%d%d%d[-/]%d%d[-/]%d%d) v(%d+[.])(%d+)"
 local oldv,newv
-if tagname == nil then
+if tagname == 'auto' then
   local i,j,olddate,a,b
   i,j,olddate,a,b= string.find(content, tagpattern)
   if i == nil then
