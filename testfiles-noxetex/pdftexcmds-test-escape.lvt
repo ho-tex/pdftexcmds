@@ -154,7 +154,7 @@
 \Test\pdf@escapehex\AllBytes\AllBytesHex
 \Test\pdf@unescapehex\AllBytesHex\AllBytes
 \Test\pdf@escapename\AllBytes\AllBytesName
-\Test\pdf@escapestring\AllBytes\AllBytesString
+%\Test\pdf@escapestring\AllBytes\AllBytesString
 \csname @@end\endcsname\end
 \endinput
 %%

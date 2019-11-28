@@ -9,6 +9,8 @@ sourcefiles={"*.dtx"}
 installfiles={"*.sty","*.lua"}
 scriptfiles={"*.lua"}
 
+checkconfigs = {"config-noxetex"}
+
 function docinit_hook ()
  return  cp("pdftexcmds.bib", "build/unpacked" ,"build/doc")
 end
