@@ -1,12 +1,12 @@
 % \iffalse meta-comment
 %
 % File: pdftexcmds.dtx
-% Version: 2019/11/24 v0.31
+% Version: 2020-06-04 v0.32
 % Info: Utility functions of pdfTeX for LuaTeX
 %
 % Copyright (C)
 % 2007, 2009-2011  Heiko Oberdiek
-% 2016-2019        Oberdiek Package Support Group
+% 2016-2020        Oberdiek Package Support Group
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either
@@ -86,7 +86,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)}
+\Msg{* Package: pdftexcmds 2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -98,7 +98,7 @@
 This is a generated file.
 
 Project: pdftexcmds
-Version: 2019/11/24 v0.31
+Version: 2020-06-04 v0.32
 
 Copyright (C)
    2007, 2009-2011  Heiko Oberdiek
@@ -196,7 +196,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{pdftexcmds.drv}%
-  [2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)]%
+  [2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \usepackage{paralist}
@@ -219,7 +219,7 @@ and the derived files
 % \GetFileInfo{pdftexcmds.drv}
 %
 % \title{The \xpackage{pdftexcmds} package}
-% \date{2019/11/24 v0.31}
+% \date{2020-06-04 v0.32}
 % \author{Heiko Oberdiek\thanks
 % {Please report any issues at \url{https://github.com/ho-tex/pdftexcmds/issues}}}
 %
@@ -597,7 +597,7 @@ and the derived files
   \fi
 \expandafter\x\csname ver@pdftexcmds.sty\endcsname
 \ProvidesPackage{pdftexcmds}%
-  [2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)]%
+  [2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO)]%
 %    \end{macrocode}
 %
 % \subsection{Catcodes}
@@ -1137,7 +1137,7 @@ and the derived files
   \fi
 \fi
 \begingroup
-  \def\x{2019/11/24 v0.31}%
+  \def\x{2020-06-04 v0.32}%
   \ltx@onelevel@sanitize\x
   \edef\y{%
     \pdftexcmds@directlua{%
@@ -1544,7 +1544,7 @@ local pdftexcmds = oberdiek.pdftexcmds or {}
 oberdiek.pdftexcmds = pdftexcmds
 local systemexitstatus
 function pdftexcmds.getversion()
-  tex.write("2019/11/24 v0.31")
+  tex.write("2020-06-04 v0.32")
 end
 %    \end{macrocode}
 %
@@ -1840,7 +1840,7 @@ function pdftexcmds.elapsedtime()
   if val > 2147483647 then
     val = 2147483647
   end
-  tex.write(string.format("%d", val))
+  tex.write(string.format("%d", math.floor(val)))
 end
 %    \end{macrocode}
 %
@@ -2252,6 +2252,9 @@ end
 %   \item Adjust \cs{pdf@escapestring} in \hologo{LuaTeX} to produce
 %     the same as in \hologo{pdfTeX} in the 8bit
 %     range and not drop all non ascii characters.
+%   \end{Version}
+%   \begin{Version}{2020-06-04 v0.32}
+%   \item Updated pdftexcmds.elapsedtime to lua 5.3 (issue 4).
 %   \end{Version}
 % \end{History}
 %
