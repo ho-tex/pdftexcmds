@@ -772,6 +772,7 @@ and the derived files
          \expandafter\ifx\csname pdf#1\endcsname\relax\else pdf\fi#1\endcsname\relax
       \pdftexcmds@nopdftex
     \else
+      \begingroup\expandafter\expandafter\expandafter\endgroup
       \expandafter\let\csname pdf@#1\expandafter\endcsname
       \csname\expandafter\ifx\csname pdf#1\endcsname\relax\else pdf\fi#1\endcsname
     \fi

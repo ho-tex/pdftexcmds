@@ -1,0 +1,13 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage{pdftexcmds}
+
+\begin{document}
+\START
+\show\pdfelapsedtime
+\show\pdfresettimer
+
+\makeatletter
+\show\pdf@elapsedtime
+\show\pdf@resettimer
+\end{document}

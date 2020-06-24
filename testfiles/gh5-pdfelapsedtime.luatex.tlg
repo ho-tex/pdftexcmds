@@ -1,0 +1,13 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+> \pdfelapsedtime=undefined.
+l. ...\show\pdfelapsedtime
+> \pdfresettimer=undefined.
+l. ...\show\pdfresettimer
+> \pdf@elapsedtime=\protected macro:
+->\numexpr \pdftexcmds@directlua {oberdiek.pdftexcmds.elapsedtime()}\relax .
+l. ...\show\pdf@elapsedtime
+> \pdf@resettimer=\protected macro:
+->\pdftexcmds@directlua {oberdiek.pdftexcmds.resettimer()}.
+l. ...\show\pdf@resettimer
+(gh5-pdfelapsedtime.aux)
