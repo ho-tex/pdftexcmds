@@ -1,7 +1,7 @@
 % \iffalse meta-comment
 %
 % File: pdftexcmds.dtx
-% Version: 2020-06-04 v0.32
+% Version: 2020-06-24 v0.33
 % Info: Utility functions of pdfTeX for LuaTeX
 %
 % Copyright (C)
@@ -86,7 +86,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: pdftexcmds 2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO)}
+\Msg{* Package: pdftexcmds 2020-06-24 v0.33 Utility functions of pdfTeX for LuaTeX (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -98,7 +98,7 @@
 This is a generated file.
 
 Project: pdftexcmds
-Version: 2020-06-04 v0.32
+Version: 2020-06-24 v0.33
 
 Copyright (C)
    2007, 2009-2011  Heiko Oberdiek
@@ -196,7 +196,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{pdftexcmds.drv}%
-  [2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO)]%
+  [2020-06-24 v0.33 Utility functions of pdfTeX for LuaTeX (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \usepackage{paralist}
@@ -219,7 +219,7 @@ and the derived files
 % \GetFileInfo{pdftexcmds.drv}
 %
 % \title{The \xpackage{pdftexcmds} package}
-% \date{2020-06-04 v0.32}
+% \date{2020-06-24 v0.33}
 % \author{Heiko Oberdiek\thanks
 % {Please report any issues at \url{https://github.com/ho-tex/pdftexcmds/issues}}}
 %
@@ -597,7 +597,7 @@ and the derived files
   \fi
 \expandafter\x\csname ver@pdftexcmds.sty\endcsname
 \ProvidesPackage{pdftexcmds}%
-  [2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO)]%
+  [2020-06-24 v0.33 Utility functions of pdfTeX for LuaTeX (HO)]%
 %    \end{macrocode}
 %
 % \subsection{Catcodes}
@@ -1139,7 +1139,7 @@ and the derived files
   \fi
 \fi
 \begingroup
-  \def\x{2020-06-04 v0.32}%
+  \def\x{2020-06-24 v0.33}%
   \ltx@onelevel@sanitize\x
   \edef\y{%
     \pdftexcmds@directlua{%
@@ -1546,7 +1546,7 @@ local pdftexcmds = oberdiek.pdftexcmds or {}
 oberdiek.pdftexcmds = pdftexcmds
 local systemexitstatus
 function pdftexcmds.getversion()
-  tex.write("2020-06-04 v0.32")
+  tex.write("2020-06-24 v0.33")
 end
 %    \end{macrocode}
 %
@@ -2257,6 +2257,12 @@ end
 %   \end{Version}
 %   \begin{Version}{2020-06-04 v0.32}
 %   \item Updated pdftexcmds.elapsedtime to lua 5.3 (issue 4).
+%   \end{Version}
+%   \begin{Version}{2020-06-24 v0.33}
+%   \item avoid that \cs{pdfelapsedtime} and \cs{pdfresettimer} is set to \cs{relax}
+%   when using xelatex (issue 5).
+%   \item load ltluatex when using plain so that the catcode tables are
+%   available. 
 %   \end{Version}
 % \end{History}
 %
