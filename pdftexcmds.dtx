@@ -693,6 +693,7 @@ and the derived files
 %
 %    \begin{macrocode}
 \ifluatex
+   \ifcsname catcodetable@string\endcsname\else\input{ltluatex}\fi
 \else
   \def\pdftexcmds@nopdftex{%
     \let\pdftexcmds@nopdftex\relax
