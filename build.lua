@@ -7,7 +7,7 @@ textfiles = {"README.md"}
 unpackfiles = {'pdftexcmds.dtx'}
 sourcefiles={"*.dtx"}
 installfiles={"*.sty","*.lua"}
-scriptfiles={"*.lua"}
+
 
 checkconfigs = {"config-noxetex"}
 
@@ -15,12 +15,13 @@ function docinit_hook ()
  return  cp("pdftexcmds.bib", "build/unpacked" ,"build/doc")
 end
  
-packtdszip  = true
+packtdszip  = false
 
 maxprintline=10000
 checkruns = 2
 
-
+tdsroot = "generic"
+tagfiles = {"*.dtx", "*.md"}
 
 function update_tag(file,content,tagname,tagdate)
 
