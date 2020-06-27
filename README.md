@@ -1,6 +1,6 @@
 # pdftexcmds
 
-Version: 2020-06-04 v0.32
+Version: 2020-06-27 v0.33
 
 pdftexcmds package for LaTeX
 
