@@ -1,7 +1,7 @@
 % \iffalse meta-comment
 %
 % File: pdftexcmds.dtx
-% Version: 2020-06-24 v0.33
+% Version: 2020-06-27 v0.33
 % Info: Utility functions of pdfTeX for LuaTeX
 %
 % Copyright (C)
@@ -67,7 +67,7 @@
 %
 % Installation:
 %    TDS:tex/generic/pdftexcmds/pdftexcmds.sty
-%    TDS:scripts/pdftexcmds/pdftexcmds.lua
+%    TDS:tex/generic/pdftexcmds/pdftexcmds.lua
 %    TDS:doc/latex/pdftexcmds/pdftexcmds.pdf
 %    TDS:source/latex/pdftexcmds/pdftexcmds.dtx
 %
@@ -86,7 +86,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: pdftexcmds 2020-06-24 v0.33 Utility functions of pdfTeX for LuaTeX (HO)}
+\Msg{* Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -98,7 +98,7 @@
 This is a generated file.
 
 Project: pdftexcmds
-Version: 2020-06-24 v0.33
+Version: 2020-06-27 v0.33
 
 Copyright (C)
    2007, 2009-2011  Heiko Oberdiek
@@ -155,7 +155,7 @@ and the derived files
 }
 \def\currentpostamble{\defaultpostamble}%
 \generate{%
-  \usedir{scripts/pdftexcmds}%
+  \usedir{tex/generic/pdftexcmds}%
   \file{pdftexcmds.lua}{\from{pdftexcmds.dtx}{lua}}%
 }
 
@@ -164,12 +164,9 @@ and the derived files
 \Msg{************************************************************************}
 \Msg{*}
 \Msg{* To finish the installation you have to move the following}
-\Msg{* file into a directory searched by TeX:}
+\Msg{* files into a directory searched by TeX:}
 \Msg{*}
 \Msg{*     pdftexcmds.sty}
-\Msg{*}
-\Msg{* And install the following script files:}
-\Msg{*}
 \Msg{*     pdftexcmds.lua}
 \Msg{*}
 \Msg{* To produce the documentation run the file `pdftexcmds.drv'}
@@ -196,7 +193,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{pdftexcmds.drv}%
-  [2020-06-24 v0.33 Utility functions of pdfTeX for LuaTeX (HO)]%
+  [2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \usepackage{paralist}
@@ -218,7 +215,7 @@ and the derived files
 % \GetFileInfo{pdftexcmds.drv}
 %
 % \title{The \xpackage{pdftexcmds} package}
-% \date{2020-06-24 v0.33}
+% \date{2020-06-27 v0.33}
 % \author{Heiko Oberdiek\thanks
 % {Please report any issues at \url{https://github.com/ho-tex/pdftexcmds/issues}}}
 %
@@ -596,7 +593,7 @@ and the derived files
   \fi
 \expandafter\x\csname ver@pdftexcmds.sty\endcsname
 \ProvidesPackage{pdftexcmds}%
-  [2020-06-24 v0.33 Utility functions of pdfTeX for LuaTeX (HO)]%
+  [2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)]%
 %    \end{macrocode}
 %
 % \subsection{Catcodes}
@@ -1138,7 +1135,7 @@ and the derived files
   \fi
 \fi
 \begingroup
-  \def\x{2020-06-24 v0.33}%
+  \def\x{2020-06-27 v0.33}%
   \ltx@onelevel@sanitize\x
   \edef\y{%
     \pdftexcmds@directlua{%
@@ -1545,7 +1542,7 @@ local pdftexcmds = oberdiek.pdftexcmds or {}
 oberdiek.pdftexcmds = pdftexcmds
 local systemexitstatus
 function pdftexcmds.getversion()
-  tex.write("2020-06-24 v0.33")
+  tex.write("2020-06-27 v0.33")
 end
 %    \end{macrocode}
 %
@@ -1934,7 +1931,7 @@ end
 %    \begin{macrocode}
 %</lua>
 %    \end{macrocode}
-%% \section{Installation}
+% \section{Installation}
 %
 % \subsection{Download}
 %
@@ -1944,31 +1941,6 @@ end
 % \item[\CTAN{macros/latex/contrib/pdftexcmds/pdftexcmds.dtx}] The source file.
 % \item[\CTAN{macros/latex/contrib/pdftexcmds/pdftexcmds.pdf}] Documentation.
 % \end{description}
-%
-%
-% \paragraph{Bundle.} All the packages of the bundle `pdftexcmds'
-% are also available in a TDS compliant ZIP archive. There
-% the packages are already unpacked and the documentation files
-% are generated. The files and directories obey the TDS standard.
-% \begin{description}
-% \item[\CTANinstall{install/macros/latex/contrib/pdftexcmds.tds.zip}]
-% \end{description}
-% \emph{TDS} refers to the standard ``A Directory Structure
-% for \TeX\ Files'' (\CTANpkg{tds}). Directories
-% with \xfile{texmf} in their name are usually organized this way.
-%
-% \subsection{Bundle installation}
-%
-% \paragraph{Unpacking.} Unpack the \xfile{pdftexcmds.tds.zip} in the
-% TDS tree (also known as \xfile{texmf} tree) of your choice.
-% Example (linux):
-% \begin{quote}
-%   |unzip pdftexcmds.tds.zip -d ~/texmf|
-% \end{quote}
-%
-% \paragraph{Script installation.}
-% Check the directory \xfile{TDS:scripts/pdftexcmds/} for
-% scripts that need further installation steps.
 %
 % \subsection{Package installation}
 %
@@ -1986,7 +1958,7 @@ end
 % \def\t{^^A
 % \begin{tabular}{@{}>{\ttfamily}l@{ $\rightarrow$ }>{\ttfamily}l@{}}
 %   pdftexcmds.sty & tex/generic/pdftexcmds/pdftexcmds.sty\\
-%   pdftexcmds.lua & scripts/pdftexcmds/pdftexcmds.lua\\
+%   pdftexcmds.lua & tex/generic/pdftexcmds/pdftexcmds.lua\\
 %   pdftexcmds.pdf & doc/latex/pdftexcmds/pdftexcmds.pdf\\
 %   pdftexcmds.dtx & source/latex/pdftexcmds/pdftexcmds.dtx\\
 % \end{tabular}^^A
@@ -2258,7 +2230,7 @@ end
 %   \item Updated pdftexcmds.elapsedtime to lua 5.3 (issue 4).
 %   \end{Version}
 %   \begin{Version}{2020-06-24 v0.33}
-%   \item avoid that \cs{pdfelapsedtime} and \cs{pdfresettimer} is set to \cs{relax}
+%   \item avoid that \cs{pdfelapsedtime} and \cs{pdfresettimer} are set to \cs{relax}
 %   when using xelatex (issue 5).
 %   \item load ltluatex when using plain so that the catcode tables are
 %   available.
