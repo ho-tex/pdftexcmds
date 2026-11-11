@@ -14,7 +14,7 @@ checkconfigs = {"config-noxetex"}
 function docinit_hook ()
  return  cp("pdftexcmds.bib", "build/unpacked" ,"build/doc")
 end
- 
+
 packtdszip  = false
 
 maxprintline=10000
